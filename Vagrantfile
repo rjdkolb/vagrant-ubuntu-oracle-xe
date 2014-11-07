@@ -13,8 +13,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.network :hostonly, "192.168.33.10"
 
-  # Port forward Oracle TNSlistener
+  # Port forward Oracle TNSlistener and APEX web frontend
   config.vm.network "forwarded_port", guest: 1521, host: 1521
+  config.vm.network "forwarded_port", guest: 8080, host: 8081
 
   config.vm.provider "virtualbox" do |vb|
     # Enable DNS behind NAT
