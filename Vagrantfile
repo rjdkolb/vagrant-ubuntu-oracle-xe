@@ -11,7 +11,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Use a FQDN to avoid puppet facter errors
   config.vm.host_name = "oracle.localnet.tld"
 
-  config.vm.network :hostonly, "192.168.33.10"
+  config.vm.network "private_network", ip: "192.168.33.10"
 
   # Port forward Oracle TNSlistener and APEX web frontend
   config.vm.network "forwarded_port", guest: 1521, host: 1521
