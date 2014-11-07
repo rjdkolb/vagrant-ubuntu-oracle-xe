@@ -8,7 +8,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "ubuntu/precise64"
   config.vm.box_check_update = false
 
-  config.vm.host_name = "oracle"
+  # Use a FQDN to avoid puppet facter errors
+  config.vm.host_name = "oracle.localnet.tld"
 
   config.vm.network :hostonly, "192.168.33.10"
 
