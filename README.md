@@ -9,7 +9,7 @@ Richard Kolb fixed the issue where the Ubuntu could not see DNS (`config.vm.cust
 
 ## Requirements
 * You need to have [Vagrant] installed.
-* Install the vagrant VirtualBox Güst Additions `vagrant plugin install vagrant-vbguest`
+* Install the vagrant VirtualBox Guest Additions `vagrant plugin install vagrant-vbguest`
 * The host machine probably needs at least 4 GB of RAM (I have only tested 8 GB of RAM).
 * As Oracle 11g XE is only available for 64-bit machines at the moment, the host machine needs to have a 64-bit architecture.
 * I have tested this project on a host machine running Ubuntu 12.04, but other operating systems should also work, as long as they can run Vagrant.
